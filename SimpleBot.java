@@ -3,11 +3,11 @@ package bot;
 import java.util.Scanner;
 
 public class SimpleBot {
-    final static Scanner scanner = new Scanner(System.in); // Do not change this line
+    final static Scanner scanner = new Scanner(System.in); 
 
     public static void main(String[] args) {
 
-        greet("Aid", "2018"); // change it as you need
+        greet("Bot", "2020"); 
         remindName();
         guessAge();
         count();
@@ -16,18 +16,21 @@ public class SimpleBot {
 
         end();
     }
-
+     
+    // greeting header message
     static void greet(String assistantName, String birthYear) {
         System.out.println("Hello! My name is " + assistantName + ".");
         System.out.println("I was created in " + birthYear + ".");
         System.out.println("Please, remind me your name.");
     }
 
+    // getting your name
     static void remindName() {
         String name = scanner.nextLine();
         System.out.println("What a great name you have, " + name + "!");
     }
 
+    // getting your age
     static void guessAge() {
         System.out.println("Let me guess your age.");
         System.out.println("Say me remainders of dividing your age by 3, 5 and 7.");
@@ -38,6 +41,7 @@ public class SimpleBot {
         System.out.println("Your age is " + age + "; that's a good time to start programming!");
     }
 
+    // perform count upto your given number
     static void count() {
         System.out.println("Now I will prove to you that I can count to any number you want.");
         int num = scanner.nextInt();
@@ -47,6 +51,7 @@ public class SimpleBot {
 
     }
 
+    // a one-option question to test you
     static void test() {
         System.out.println("Let's test your programming knowledge.");
         System.out.println("What is the best programming language?");
@@ -62,10 +67,11 @@ public class SimpleBot {
                 System.out.println("Please, try again");
             }
         }
-        // write your code here
+        
     }
 
+    // ending message
     static void end() {
-        System.out.println("Congratulations, have a nice day!"); // Do not change this text
+        System.out.println("Congratulations, have a nice day!"); 
     }
 }
